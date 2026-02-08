@@ -52,4 +52,7 @@ bitcoin_tx_decoder/
 
 ## More info
 
+To read about the whole project in detail please read - [PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)
+
 See [README_FULL.md](./README_FULL.md) for detailed documentation, or [SAMPLE_TRANSACTIONS.md](./SAMPLE_TRANSACTIONS.md) for more test transactions.
+
