@@ -2,7 +2,7 @@
 
 This is a web-based tool for decoding raw Bitcoin transactions. You paste in a hex string, and it shows you everything that's packed inside: the version, inputs, outputs, scripts, witness data (if it's SegWit), and computes the TXID.
 
-The goal was to build something that helps visualize what's actually happening at the protocol level, without relying on any Bitcoin libraries. All the parsing is done from scratch in Python.
+I built this as a way to better understand how Bitcoin transactions are structured at the byte level. The backend is written in Python using FastAPI, and the frontend is React with TypeScript. No external Bitcoin libraries - the parser is written from scratch.
 
 ## The stack
 
@@ -60,6 +60,8 @@ This is a simple legacy transaction with 1 input and 2 outputs:
 
 ```
 bitcoin_tx_decoder/
+├── api/
+│   └── main.py                     # For setting up Vercel
 ├── frontend/
 │   └── src/
 │       ├── api/client.ts           # Talks to the backend
@@ -111,9 +113,9 @@ Just returns a simple message to confirm the server is up.
 
 ## About the design
 
-I went with a dark theme because that's what feels right for a crypto tool. The colors are mostly dark blues and grays, with cyan and purple accents. Cards have a slight transparency and blur effect (glassmorphism).
+I went with a dark theme because that's what feels right for a crypto tool. I gave it a glassmorphism look with the help of some design maker softwares.
 
-Animations are handled by Framer Motion - nothing over the top, just smooth fades and slides when content appears or sections expand/collapse.
+Animations here are handled by Framer Motion.
 
 The font is Inter, loaded from Google Fonts.
 
@@ -137,7 +139,13 @@ It's also a decent portfolio piece that shows I can build a full-stack app with 
 - Fee calculation (sum of inputs minus sum of outputs)
 - Better SegWit support (currently it detects SegWit but doesn't fully parse witness data)
 - Export to JSON button
-- Light mode toggle
+- Light mode 
+
+## More info
+
+To read about the whole project in detail please read [PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md).
+
+For more test transactions, please see [SAMPLE_TRANSACTIONS.md](./SAMPLE_TRANSACTIONS.md).
 
 ## License
 
